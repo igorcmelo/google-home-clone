@@ -2,6 +2,12 @@
 @import "./fonts";
 @import "./colors";
 
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
 header {
   nav {
     display: flex;
@@ -119,6 +125,7 @@ main {
     #searchInput {
       padding: 5px;
       width: 447px;
+      font-size: 16px;
     }
 
     .microphone-icon {
@@ -162,6 +169,40 @@ main {
   }
 
   p.credits {
-    font-size: 13.5px;
+    font-size: 14px;
+  }
+}
+
+footer {
+  background-color: #f2f2f2;
+
+  .footer1,
+  .footer2 {
+    padding: 11px 20px;
+    display: flex;
+    flex-direction: row;
+
+    * {
+      color: #0000008a;
+      margin: 5px;
+      font-size: 15px;
+    }
+  }
+
+  .footer1 {
+    justify-content: flex-start;
+    border-bottom: 1px solid #0001;
+  }
+
+  .footer2 {
+    justify-content: space-between;
+
+    .left * {
+      margin-right: 20px;
+    }
+
+    .right * {
+      margin-left: 20px;
+    }
   }
 }
