@@ -30,7 +30,7 @@ main {
   }
 
   .search-box:hover,
-  .search-box:active {
+  .search-box.active {
     box-shadow: 0 1px 5px #00000030;
   }
 
@@ -55,7 +55,7 @@ main {
       line-height: 20px;
     }
 
-    .search-input {
+    #searchInput {
       padding: 5px;
       width: 447px;
     }
