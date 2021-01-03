@@ -75,6 +75,13 @@ main {
   .search-buttons {
     margin: 20px 0;
 
+    .btn:hover {
+      box-shadow: 0 1px 2px #0001;
+      border: 1px solid #dadce0;
+      color: black;
+      cursor: pointer;
+    }
+
     .btn {
       height: 36px;
 
@@ -82,13 +89,10 @@ main {
       margin: 11px 4px;
 
       border: 1px solid #f8f9fa;
-      border-radius: 4px;
+      border-radius: 3px;
 
+      color: #3c4043;
       background-color: #f8f9fa;
-
-      a {
-        color: #3c4043;
-      }
     }
   }
 
