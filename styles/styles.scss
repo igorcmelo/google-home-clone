@@ -1,0 +1,98 @@
+@import "./reset";
+@import "./fonts";
+@import "./colors";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .huge-logo {
+    font-weight: 400;
+    font-size: 100px;
+    font-family: $logoFont, sans-serif;
+    letter-spacing: -3px;
+
+    display: flex;
+    align-items: flex-end;
+
+    span:not(:first-child) {
+      font-size: 80px;
+      font-weight: 500;
+    }
+
+    @for $i from 1 through 6 {
+      span:nth-child(#{$i}) {
+        $currentColor: nth($logoColors, $i);
+        color: $currentColor;
+      }
+    }
+  }
+
+  .search-box:hover,
+  .search-box:active {
+    box-shadow: 0 1px 5px #00000030;
+  }
+
+  .search-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 582px;
+    height: 44px;
+
+    border: 1px solid #dfe1e5;
+    border-radius: 25px;
+
+    .search-icon {
+      margin: 0px 13px;
+
+      color: #9aa0a6;
+      fill: currentColor;
+
+      height: 20px;
+      line-height: 20px;
+    }
+
+    .search-input {
+      padding: 5px;
+      width: 447px;
+    }
+
+    .microphone-icon {
+      width: 24px;
+      height: 24px;
+      line-height: 44px;
+    }
+
+    .keyboard-icon,
+    .microphone-icon {
+      margin: 10px;
+    }
+  }
+
+  .search-buttons {
+    margin: 20px 0;
+
+    .btn {
+      height: 36px;
+
+      padding: 0px 16px;
+      margin: 11px 4px;
+
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+
+      background-color: #f8f9fa;
+
+      a {
+        color: #3c4043;
+      }
+    }
+  }
+
+  p.credits {
+    font-size: 13.5px;
+  }
+}
