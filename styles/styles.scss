@@ -23,11 +23,11 @@ header {
       font-size: 13px;
     }
 
-    .more-icon:hover {
-      background-color: #3c404314;
-    }
-
     .more-icon {
+      &:hover {
+        background-color: #3c404314;
+      }
+
       fill: #5f6368;
 
       width: 40px;
@@ -85,25 +85,27 @@ main {
     display: flex;
     align-items: baseline;
 
-    span:not(:first-child) {
-      font-size: 80px;
-      font-weight: 500;
-    }
+    span {
+      &:not(:first-child) {
+        font-size: 80px;
+        font-weight: 500;
+      }
 
-    @for $i from 1 through 6 {
-      span:nth-child(#{$i}) {
-        $currentColor: nth($logoColors, $i);
-        color: $currentColor;
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          $currentColor: nth($logoColors, $i);
+          color: $currentColor;
+        }
       }
     }
   }
 
-  .search-box:hover,
-  .search-box.active {
-    box-shadow: 0 1px 5px #00000030;
-  }
-
   .search-box {
+    &:hover,
+    &.active {
+      box-shadow: 0 1px 5px #00000030;
+    }
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -149,14 +151,14 @@ main {
 
     margin: 20px 0;
 
-    .btn:hover {
-      box-shadow: 0 1px 2px #0001;
-      border: 1px solid #dadce0;
-      color: black;
-      cursor: pointer;
-    }
-
     .btn {
+      &:hover {
+        box-shadow: 0 1px 2px #0001;
+        border: 1px solid #dadce0;
+        color: black;
+        cursor: pointer;
+      }
+
       height: 36px;
 
       padding: 0px 16px;
